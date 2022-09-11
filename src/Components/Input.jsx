@@ -8,7 +8,7 @@ import {
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import { ChatContext } from "../Context/ChatContext";
-import { db, storage } from "../firebase";
+import { db, storage } from "../Firebase";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
@@ -69,10 +69,6 @@ const Input = () => {
 
     setText("");
     setImg(null);
-  };
-
-  const handleKey = (event) => {
-    event.code === "Enter" && handleSend();
   };
 
   return (
